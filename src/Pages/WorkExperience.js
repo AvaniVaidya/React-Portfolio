@@ -11,7 +11,7 @@ const workExperienceData = [
     duration: "2 months",
     skills: "Skills: Javascript, Node.js, AJAX, D3.js, C3.js",
     details:
-      "• Formed a Key-Performance Indicator Dashboard for Project Feature Management utilizing Node.js. \n\n• Retrieved feature information data from JIRA software through AJAX requests to the JIRA REST Service and transformed the JSON data in graphs/charts with D3.js/C3.js libraries to provide valuable insights.",
+      "• Formed a Key-Performance Indicator dashboard for project feature management utilizing Node.js.\n\nRetrieved feature information data from JIRA software through AJAX requests to the JIRA REST Service and transformed the JSON data into graphs/charts with D3.js/C3.js libraries providing valuable insights.",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const workExperienceData = [
     skills:
       "Skills: C#, .NET MVC Framework, ASP.NET, WCF, IIS, HTML5, CSS, Javascript",
     details:
-      "Implemented features for an Admin tool supervising communication element across Avaya based environment – a bundle of Web Applications deployed on IIS with Windows Communication Foundation as backbone of it. \n\n• Achieved a 30% reduction in user response time by caching call center agent data in the database, eliminating redundant REST API calls to the Avaya adjunct element and synchronizing data retrieval with user requests.\n\n• Secured server communication by validating server’s identity in its Certificate SAN/CN fields.\n\n• Devised a mechanism to generate SNMP Active alarm reports dumped into a rolling file to view alarm status.\n\n• Addressed customer escalations and defects promptly with accurate solutions.\n\n\n Established Server-Sent Events for streaming real-time notifications from Server to Client\n\n• Constructed two modules: a Client-side Notification plug-in in jQuery that involved Server-Sent Events (SSE), an HTML5 specification to attain real-time rendering of messages, connection status and errors, and a Server-side ASP.NET CORE platform independent web application for notification management.\n\n• Designed and implemented a user interface utilizing JavaScript, HTML, and CSS, featuring a hamburger menu icon. Integrated a real-time notification panel displaying dynamic updates. Implemented functionality allowing users to delete unnecessary notifications and seamlessly scroll through the menu.",
+      "• Developed UI with Razor Pages in .cshtml for CRUD operations, utilizing C# and .NET Framework for backend integration with MySQL based on MVC architecture, improving scalability and maintainability.\n\n• Secured server communication by validating server’s identity in Certificate SAN/CN fields.\n\n• Devised a mechanism for generating SNMP Active alarm reports in rolling files to monitor alarm status, cutting down operational costs by 15%.\n\n• Addressed bottleneck defects, increasing code quality and performance by 25%.",
   },
   {
     id: 3,
@@ -33,15 +33,18 @@ const workExperienceData = [
     skills:
       "Skills: Java, Spring boot, Kubernetes, Kafka, Microsoft Azure, Microservices Architecture, Web API Development(REST API), OPEN API Specification Standard",
     details:
-      "Collaborated in building an administrative tool to control and manage Avaya communication elements across Avaya based envi- ronment – a cloud-based offering built on Microservices architecture hosted on Kubernetes platform.\n\n• Created REST API for Avaya adjunct element CRUD operations leveraging OpenAPI Specification Standards with data persistence via JPA and publication on Kafka in a single transaction.\n\n• Attained synchronization of Avaya adjunct element and NGM database by fetching JSON data over WebSocket connection from an on-prem connector to cloud-based service, resolving 95% of encountered diverse conflicting cases.\n\n• Proposed and executed strategy to detect eliminated intervals within user-updated ranges, with reduced code complexity by eliminating 70% of previous algorithm’s conditional statements.\n\n• Successfully orchestrated the deployment of a cloud-based service on a Linux container using Kubernetes, while leveraging CCM commands for installation. This process involved fetching the necessary images from remote Docker repositories and closely monitoring the deployment’s health and performance metrics through kubectl commands.\n\n• Played a key role in reducing code smells and increasing code coverage.",
+      "• Created REST APIs for CRUD operations with Java, Spring Boot, OpenAPI, JPA for data persistence, and Kafka for publishing data in a single transaction, improving data consistency by 20% and reliability by 15%.\n\n• Synchronized Avaya adjunct elements with NGM database via WebSocket from on-premises to cloud service, ensuring seamless data integration and reducing latency by 25%.\n\n• Dropped code complexity by 70% through optimized algorithms, resulting in faster execution times.\n\n• Deployed cloud services on Linux containers using Kubernetes, Docker images and performance monitoring via kubectl, enhancing system scalability and reliability.\n\n• Enhanced code quality by decreasing code smells by 30% and increasing code coverage to 80% through writing JUnit test cases incorporating Mockito.",
   },
 ];
 
 export default function WorkExperience() {
   return (
-    <section className="commonSection" id="workexperience">
-      <Header />
-      <div className="container">
+    <section className="content" id="workexperience">
+      {/* <section className="content" id="workexperience"> */}
+      <div className="column">
+        <span className="headerText" style={{ marginBottom: "1.5vh" }}>
+          Work Experience
+        </span>
         <FlashCard />
       </div>
     </section>

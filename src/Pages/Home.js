@@ -5,7 +5,7 @@ import { Header } from "../index.js";
 export default function Home() {
   return (
     <section className="bgimage" id="home">
-      <Header />
+      {/*<Header />*/}
       <div className="container">
         <section className="midSection">
           <p className="homeText">

@@ -5,12 +5,9 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Education from "./Pages/Education";
 import WorkExperience from "./Pages/WorkExperience";
+import ProjectPaper from "./Pages/ProjectPaper";
 
 export const activeLinks = [
-  {
-    name: "Home",
-    href: "#home",
-  },
   {
     name: "About",
     href: "#about",
@@ -39,31 +36,40 @@ export const activeLinks = [
 
 function App() {
   return (
-    <>
-      <Home />
-      <About />
-      <Education />
-      <WorkExperience />
-    </>
+    <div className="container">
+      <Header />
+      <div>
+        <About />
+      </div>
+      <div className="content">
+        <Education />
+      </div>
+      <div>
+        <WorkExperience />
+      </div>
+      <div>
+        <ProjectPaper />
+      </div>
+    </div>
   );
 }
 
 export function Header() {
   return (
-    <header className="infoList">
-      {activeLinks.map((link) => (
-        <Link activeLinkObj={link} />
-      ))}
-    </header>
+    <nav className="navbar">
+      <ul>
+        {activeLinks.map((link) => (
+          <Link activeLinkObj={link} />
+        ))}
+      </ul>
+    </nav>
   );
 }
 
 function Link({ activeLinkObj }) {
   return (
-    <li className="listItem">
-      <a className="link" href={activeLinkObj.href}>
-        {activeLinkObj.name}
-      </a>
+    <li>
+      <a href={activeLinkObj.href}>{activeLinkObj.name}</a>
     </li>
   );
 }

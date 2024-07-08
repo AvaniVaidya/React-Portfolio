@@ -7,7 +7,6 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import { Header } from "../index.js";
 
 const educationData = [
   {
@@ -43,68 +42,70 @@ const educationData = [
     end_year: "Present",
     degree: "Master of Science in Computer Science and Engineering",
     institution: "Santa Clara University",
-    score: "GPA: 3.6/4.0",
+    score: "GPA: 3.7/4.0",
     location: "Santa Clara, United States",
   },
 ];
 
 export default function Education() {
   return (
-    <section className="commonSection" id="education">
-      <Header />
-      <div className="container">
-        <section className="midSection" style={{ marginTop: "2%" }}>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "3vh",
-              marginLeft: "10%",
-              color: "rgb(177, 134, 26)",
-            }}
-          >
-            Education History
-          </p>
-          {educationData.map((edu) => (
-            <Timeline position="alternate">
-              <TimelineItem>
-                <TimelineOppositeContent color="black">
-                  {edu.start_year}
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent color="black">
-                  {edu.degree}
-                  <br />
-                  {edu.institution}
-                  <br />
-                  {edu.score}
-                  <br />
-                  {edu.location}
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                </TimelineSeparator>
-                <TimelineContent color="black">{edu.end_year}</TimelineContent>
-              </TimelineItem>
-            </Timeline>
-          ))}
-        </section>
-        <section className="midSection" style={{ marginTop: "2%" }}>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "3vh",
-              marginLeft: "10%",
-              color: "rgb(177, 134, 26)",
-            }}
-          >
-            Courses
-          </p>
-        </section>
+    // <section className="content" id="education">
+    <section id="education" style={{ display: "flex", position: "relative" }}>
+      <div style={{ position: "relative" }}>
+        <span
+          style={{
+            writingMode: "vertical-rl",
+            transform: "rotate(180deg)",
+            fontSize: "5vh",
+            width: "5vh",
+            height: "80vh",
+            backgroundColor: "#333",
+            padding: "1vh 0vh 1vh 1vh",
+            textAlign: "center",
+            color: "white",
+            zIndex: 100,
+            position: "absolute", // Changed to absolute
+            top: "5vh", // Adjust as needed
+            left: "2vh", // Adjust as needed
+          }}
+        >
+          Education Timeline
+        </span>
+      </div>
+      <div
+        className="column"
+        style={{ flex: 1, position: "relative", marginLeft: "5vh" }}
+      >
+        {educationData.map((edu) => (
+          <Timeline position="alternate">
+            <TimelineItem>
+              <TimelineOppositeContent color="black" fontSize="1.5vh">
+                {edu.start_year}
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent color="black" fontSize="1.5vh">
+                {edu.degree}
+                <br />
+                {edu.institution}
+                <br />
+                {edu.score}
+                <br />
+                {edu.location}
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+              </TimelineSeparator>
+              <TimelineContent color="black" fontSize="1.5vh">
+                {edu.end_year}
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        ))}
       </div>
     </section>
   );
