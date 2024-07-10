@@ -37,9 +37,9 @@ const projects = [
   },
 ];
 
-export default function ProjectPaper() {
+export default function Projects() {
   return (
-    <section className="content" id="projectpaper">
+    <section className="content" id="projects">
       <div className="projectcolumn">
         <span className="headerText">Projects</span>
       </div>
@@ -47,7 +47,13 @@ export default function ProjectPaper() {
         {projects.map((project) => (
           <div key={project.id} className="project-box">
             <h3>
-              <a href={project.github_url} className="project-github-link">
+              <a
+                href={project.github_url}
+                className="project-github-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {/* <SiGithub style={{ marginRight: "1vh" }} /> */}
                 <SiGithub />
               </a>
               {project.name}

@@ -30,7 +30,7 @@ export default function About() {
         <span className="textstyle3">Contact</span>
         <div className="social-links">
           <a
-            href="www.linkedin.com/in/avanivaidya2512"
+            href="https://www.linkedin.com/in/avanivaidya2512"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -57,7 +57,8 @@ export default function About() {
           <a
             href="https://bit.ly/avanivaidyaresume"
             className="social-link"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaDownload />
             <span className="link-text">Download Resume</span>

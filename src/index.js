@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Education from "./Pages/Education";
 import WorkExperience from "./Pages/WorkExperience";
-import ProjectPaper from "./Pages/ProjectPaper";
+import Projects from "./Pages/Projects";
+import Publication from "./Pages/Publication";
+import Skills from "./Pages/Skills";
 
 export const activeLinks = [
   {
@@ -21,16 +22,16 @@ export const activeLinks = [
     href: "#workexperience",
   },
   {
-    name: "Projects & Paper",
-    href: "#projectpaper",
+    name: "Projects",
+    href: "#projects",
   },
   {
-    name: "Resume",
-    href: "#resume",
+    name: "Publication",
+    href: "#publication",
   },
   {
-    name: "Contact",
-    href: "#contact",
+    name: "Skills",
+    href: "#skills",
   },
 ];
 
@@ -48,7 +49,13 @@ function App() {
         <WorkExperience />
       </div>
       <div>
-        <ProjectPaper />
+        <Projects />
+      </div>
+      <div>
+        <Publication />
+      </div>
+      <div>
+        <Skills />
       </div>
     </div>
   );
