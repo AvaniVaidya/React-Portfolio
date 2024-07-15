@@ -9,7 +9,7 @@ export default function About() {
     <section className="content" id="about">
       <div className="column centeralign">
         <img
-          src="./React-Portfolio/AvaniImage3.jpg"
+          src="/AvaniImage3.jpg"
           alt="profileImage"
           className="profile-image"
         ></img>
