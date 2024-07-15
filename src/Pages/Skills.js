@@ -71,7 +71,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="content1" id="publication">
+    <section className="content1" id="skills">
       <div className="column centeralign">
         <span className="headerText" style={{ marginBottom: "1.5vh" }}>
           Skills

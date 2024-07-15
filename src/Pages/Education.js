@@ -50,7 +50,10 @@ const educationData = [
 export default function Education() {
   return (
     // <section className="content" id="education">
-    <section id="education" style={{ display: "flex", position: "relative" }}>
+    <section
+      id="education"
+      style={{ display: "flex", position: "relative", paddingTop: "5vh" }}
+    >
       <div style={{ position: "relative" }}>
         <span
           style={{

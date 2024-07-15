@@ -55,8 +55,8 @@
   flex: 1;
   height: 90vh;
   justify-content: space-around;
-  padding: 1vh;
-  margin: 5vh 1vh 0 1vh;
+  padding: 5vh 1vh 0vh 1vh;
+  /* margin: 1vh 1vh 1vh 1vh; */
   overflow-y: auto;
 }
 
@@ -65,8 +65,8 @@
   position: relative;
   flex: 1;
   justify-content: space-around;
-  padding: 1vh;
-  margin: 5vh 1vh 0 1vh;
+  padding: 5vh 1vh 0vh 1vh;
+  /* margin: 1vh 1vh 1vh 1vh; */
   overflow-y: auto;
 }
 
@@ -120,7 +120,7 @@
   background-color: #333;
   padding: 2vh 0vh 1vh 1vh;
   position: relative;
-  left: -3rem;
+
   color: white;
   width: 100%;
   z-index: 1;
