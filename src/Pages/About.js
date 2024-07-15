@@ -9,7 +9,8 @@ export default function About() {
     <section className="content" id="about">
       <div className="column centeralign">
         <img
-          src="/AvaniImage3.jpg"
+          // src="./AvaniImage3.jpg"
+          src={`${process.env.PUBLIC_URL}/AvaniImage3.jpg`}
           alt="profileImage"
           className="profile-image"
         ></img>
