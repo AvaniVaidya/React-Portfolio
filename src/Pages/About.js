@@ -56,7 +56,7 @@ export default function About() {
           </a>
           <span className="textstyle3">Resume</span>
           <a
-            href="https://bit.ly/avanivaidyaresume"
+            href="https://bit.ly/avanivaidyacv"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
